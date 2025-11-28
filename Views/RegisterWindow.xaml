@@ -1,0 +1,50 @@
+<Window x:Class="OrderSystemEF.Views.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Регистрация" Height="500" Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Регистрация" 
+                   FontSize="24" FontWeight="Bold" 
+                   HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="1" Margin="0,10">
+            <TextBlock Text="Имя пользователя:" Margin="0,0,0,5"/>
+            <TextBox Name="UsernameTextBox"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Margin="0,10">
+            <TextBlock Text="Email:" Margin="0,0,0,5"/>
+            <TextBox Name="EmailTextBox"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Margin="0,10">
+            <TextBlock Text="Пароль:" Margin="0,0,0,5"/>
+            <PasswordBox Name="PasswordBox"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Margin="0,10">
+            <TextBlock Text="Подтверждение пароля:" Margin="0,0,0,5"/>
+            <PasswordBox Name="ConfirmPasswordBox"/>
+        </StackPanel>
+
+        <Button Grid.Row="5" Name="RegisterButton" Content="Зарегистрироваться" 
+                Click="RegisterButton_Click" Margin="0,20,0,10" 
+                Height="35" FontSize="14"/>
+
+        <TextBlock Grid.Row="6" Name="ErrorTextBlock" 
+                   Foreground="Red" TextWrapping="Wrap" 
+                   Margin="0,10" Visibility="Collapsed"/>
+    </Grid>
+</Window>
+
